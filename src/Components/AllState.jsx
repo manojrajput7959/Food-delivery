@@ -12,7 +12,7 @@ const AllState = (props) => {
 
     const [food_list, setfoodList] = useState([])
 
-    const url = "http://localhost:4000"
+    const url = "https://food-delivery-backend-a6qk.onrender.com"
 
     const addtoCart = async (itemId) => {
         if (!cartItem[itemId]) {
@@ -75,7 +75,7 @@ const AllState = (props) => {
 
     const getAllFood = async () => {
 
-        const response = await axios.get("http://localhost:4000/api/food/List");
+        const response = await axios.get("https://food-delivery-backend-a6qk.onrender.com/api/food/List");
         setfoodList(response.data.data)
     }
 
